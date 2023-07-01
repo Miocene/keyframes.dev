@@ -1,0 +1,253 @@
+@media (prefers-color-scheme: dark) {
+    :root {
+        --backgroud-primary: #161616;
+        --backgroud-secondary: #1f1e1e;
+        
+        --text-primary: #ffffff;
+        --text-secondary: rgba(255 255 255 / 0.6);
+        --text-link: oklch(0.91 0.23 130.5 / 1);
+        
+        --code-punctuation: ;
+        --code-property: oklch(0.7 0.3 9.4 / 1);
+        --code-selector: oklch(0.91 0.23 130.5 / 1);
+        --code-function: oklch(0.7 0.2 26 / 1);
+    }
+}
+@media (prefers-color-scheme: light) {
+    :root {
+        --backgroud-primary: #E9E9E9;
+        --backgroud-secondary: #E0E1E1;
+        
+        --text-primary: #333333;
+        --text-secondary: rgba(51 51 51 / 0.6);
+        --text-link: oklch(0.91 0.23 130.5 / 0.3);
+    }
+}
+
+html {
+    background-color: var(--backgroud-primary);
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: 300;
+    /* 16 - 20 */
+    font-size: clamp(14px, 1rem + 0.3vw, 16px);
+    line-height: 150%;
+    color: var(--text-primary);
+}
+
+body {
+    display: grid;
+    min-height: 100vh;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 clamp(20px, 10vw, 40px);
+    grid-template-rows: 1fr max-content;
+    gap: clamp(40px, 10vw, 80px);
+}
+
+body:has(header) {
+    grid-template-rows: max-content 1fr max-content;
+}
+
+.h1 {
+    margin: 0 0 clamp(32px, 5vw, 60px);
+    font-weight: 700;
+    font-family: 'Elsie Swash Caps', cursive;
+    font-size: clamp(40px, 1rem + 4vw, 90px);
+    line-height: 110%;
+    text-align: center;
+}
+
+.h2 {
+    margin: 0 0 clamp(12px, 5vw, 20px);
+    font-weight: 100;
+    font-family: 'Elsie Swash Caps', cursive;
+    font-size: clamp(24px, 1rem + 2vw, 40px);
+    line-height: 110%;
+}
+
+.p {
+    width: 100%;
+    margin: 0 auto;
+    font-weight: 300;
+    font-size: 1em;
+    line-height: 150%;
+    max-width: 60ch;
+}
+
+.p:not(:last-of-type) {
+    margin-bottom: clamp(8px, 2vw, 12px);
+}
+
+a, a:visited {
+    color: inherit;
+    text-decoration-thickness: 3px;
+    transition: color 0.15s ease-in,
+                text-decoration-color 0.2s ease-in;
+}
+
+a:hover, a:active {
+    color: oklch(0.91 0.23 130.5);
+    text-decoration-color: var(--text-link);
+}
+
+a:focus-visible {
+    outline-color: oklch(0.91 0.23 130.5);
+    outline-style: solid;
+    outline-width: 3px;
+    outline-offset: 2px;
+    border-radius: 2px;
+    text-decoration-thickness: 0;
+}
+
+
+/* LOGO BLOCK */
+
+.logoBlock {
+
+}
+
+.logoBlock-big {
+    padding: clamp(20px, 10vw, 80px) 0;
+}
+
+.logoBlock-small {
+    padding-top: clamp(24px, 5vw, 40px);
+    text-align: center;
+}
+
+.logoBlock__title {
+    position: relative;
+    font-family: 'Elsie Swash Caps', cursive;
+    line-height: 110%;
+}
+
+.logoBlock__title::before {
+    position: absolute;
+    content: '✣';
+    top: 0.1em;
+    font-size: 0.8em;
+    font-weight: 400;
+    translate: calc(-100% - 0.2em);
+}
+.logoBlock__title::after {
+    position: absolute;
+    content: '✣';
+    top: 0.1em;
+    font-size: 0.8em;
+    translate: 0.2em;
+}
+
+.logoBlock-big .logoBlock__title {
+    margin-bottom: clamp(0px, 0.05em, 4px);
+    font-size: clamp(40px, 1rem + 4vw, 90px);
+    font-weight: 400;
+    text-align: center;
+}
+
+.logoBlock-small .logoBlock__title {
+    font-size: clamp(20px, 1rem + 1vw, 32px);
+    font-weight: 100;
+}
+
+.logoBlock__lead {
+    margin: 0;
+    text-align: center;
+    color: var(--text-secondary);
+}
+
+/* CARD GRID */
+
+.cardGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(min(380px,100%),1fr));
+    gap: 40px;
+    margin: 0;
+    padding: 0;
+}
+
+.card {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: clamp(12px, 3vw, 24px);
+    gap: 20px;
+    background-color: var(--backgroud-secondary);
+    border-radius: 12px;
+    list-style: none;
+    transition: translate 0.25s ease;
+}
+
+.car__title {
+    position: relative;
+    margin: 0;
+    font-weight: 400;
+    font-family: 'Elsie Swash Caps', cursive;
+    line-height: 110%;
+    text-align: center;
+    font-size: clamp(20px, 1rem + 2vw, 40px);
+}
+
+.card picture {
+    display: flex;
+    justify-content: center;
+}
+
+.card img {
+    width: clamp(150px, 50%, 250px);
+}
+
+.card__link {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+}
+
+.card:has(.card__link):hover {
+    translate: 0 -8px;
+}
+
+
+/* FOOTER */
+
+.footer {
+    padding: 20px 0;
+    text-align: center;
+    color: var(--text-secondary);
+}
+
+
+/* EXAMPLE */
+
+.exampleList {
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(min(380px, 100%), 1fr));
+    gap: 40px;
+    margin: 24px 0;
+    padding: 0;
+    list-style: none;
+}
+
+.exampleList:not(:last-child) {
+    margin-bottom: clamp(40px, 10vw, 80px);
+}
+
+.exampleList__description {
+}
+
+.exampleList > li:first-child {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.example {
+    padding: clamp(24px, 3vw, 32px) clamp(12px, 3vw, 24px) clamp(12px, 3vw, 24px);
+    background-color: var(--backgroud-secondary);
+    border-radius: 12px;
+}
+
+.example__view {
+    margin-bottom: 20px;
+}
