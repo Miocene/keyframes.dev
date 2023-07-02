@@ -8,6 +8,8 @@
         --text-link: oklch(0.91 0.23 130.5);
         --text-link-line: oklch(1 0 0 / 0.3);
         
+        --border: oklch(1 0 0 / 0.2);
+        
         --code-property: oklch(0.7 0.3 9.4);
         --code-selector: oklch(0.91 0.23 130.5);
         --code-function: oklch(0.7 0.2 26);
@@ -22,6 +24,8 @@
         --text-secondary: oklch(0.32 0 0 / 0.6);
         --text-link: oklch(0.56 0.15 168.3);
         --text-link-line: oklch(0.32 0 0 / 0.2);
+        
+        --border: oklch(0.32 0 0 / 0.2);
         
         --code-property: oklch(0.55 0.24 8.79);
         --code-selector: oklch(0.91 0.23 130.5);
@@ -46,7 +50,8 @@ body {
     margin: 0 auto;
     padding: 0 clamp(20px, 10vw, 40px);
     grid-template-rows: 1fr max-content;
-    gap: clamp(40px, 10vw, 80px);
+    grid-template-columns: 100%;
+    gap: clamp(40px, 7vw, 80px);
 }
 
 body:has(header) {
@@ -103,6 +108,16 @@ a:focus-visible {
     outline-offset: 2px;
     border-radius: 2px;
     text-decoration-thickness: 0;
+}
+
+.divider {
+    position: relative;
+    height: 1px;
+    margin: clamp(40px, 10vw, 80px) 0;
+    background: linear-gradient(90deg, var(--border) calc(50% - 4ch), transparent calc(50% - 4ch) calc(50% + 4ch), var(--border) calc(50% + 4ch));
+    text-align: center;
+    line-height: 1px;
+    color: var(--text-secondary);
 }
 
 
@@ -167,7 +182,7 @@ a:focus-visible {
 .cardGrid {
     display: grid;
     grid-template-columns: repeat(auto-fill,minmax(min(380px,100%),1fr));
-    gap: 40px;
+    gap: clamp(20px, 3vw, 40px);
     margin: 0;
     padding: 0;
 }
@@ -234,14 +249,19 @@ a:focus-visible {
 .exampleList {
     display: grid;
     grid-template-columns: repeat(auto-fill,minmax(min(380px, 100%), 1fr));
-    gap: 40px;
-    margin: 24px 0;
+    gap: clamp(20px, 3vw, 40px);
+    margin: 0;
     padding: 0;
     list-style: none;
 }
 
 .exampleList:not(:last-child) {
     margin-bottom: clamp(40px, 10vw, 80px);
+}
+
+.exampleList p {
+    margin-left: 0;
+    margin-right: 0;
 }
 
 .exampleList__description {
@@ -254,7 +274,6 @@ a:focus-visible {
 }
 
 .example {
-    padding: clamp(24px, 3vw, 32px) clamp(12px, 3vw, 24px) clamp(12px, 3vw, 24px);
     background-color: var(--backgroud-secondary);
     border-radius: 12px;
 }
@@ -268,5 +287,10 @@ a:focus-visible {
 }
 
 .example__view {
+    padding: clamp(24px, 3vw, 32px) clamp(12px, 3vw, 24px) 0;
     margin-bottom: 20px;
+}
+
+.example__code {
+    padding: 0 clamp(12px, 3vw, 24px) clamp(12px, 3vw, 24px);
 }
