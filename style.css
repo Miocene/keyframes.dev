@@ -5,12 +5,12 @@
         
         --text-primary: oklch(1 0 0);
         --text-secondary: oklch(1 0 0 / 0.6);
-        --text-link: oklch(0.91 0.23 130.5 / 1);
+        --text-link: oklch(0.91 0.23 130.5);
         --text-link-line: oklch(1 0 0 / 0.3);
         
-        --code-property: oklch(0.7 0.3 9.4 / 1);
-        --code-selector: oklch(0.91 0.23 130.5 / 1);
-        --code-function: oklch(0.7 0.2 26 / 1);
+        --code-property: oklch(0.7 0.3 9.4);
+        --code-selector: oklch(0.91 0.23 130.5);
+        --code-function: oklch(0.7 0.2 26);
     }
 }
 @media (prefers-color-scheme: light) {
@@ -20,12 +20,12 @@
         
         --text-primary: oklch(0.32 0 0);
         --text-secondary: oklch(0.32 0 0 / 0.6);
-        --text-link: oklch(0.5 0.17 133.98);
-        --text-link-line: oklch(0.5 0.17 133.98 / 0.3);
+        --text-link: oklch(0.56 0.15 168.3);
+        --text-link-line: oklch(0.32 0 0 / 0.2);
         
-        --code-property: oklch(0.7 0.3 9.4 / 1);
-        --code-selector: oklch(0.91 0.23 130.5 / 1);
-        --code-function: oklch(0.7 0.2 26 / 1);
+        --code-property: oklch(0.55 0.24 8.79);
+        --code-selector: oklch(0.91 0.23 130.5);
+        --code-function: oklch(0.54 0.24 29.54);
     }
 }
 
@@ -97,7 +97,7 @@ a:hover, a:active {
 }
 
 a:focus-visible {
-    outline-color: oklch(0.91 0.23 130.5);
+    outline-color: var(--text-link);
     outline-style: solid;
     outline-width: 3px;
     outline-offset: 2px;
@@ -153,6 +153,7 @@ a:focus-visible {
 .logoBlock-small .logoBlock__title {
     font-size: clamp(20px, 1rem + 1vw, 32px);
     font-weight: 100;
+    text-decoration-color: transparent;
 }
 
 .logoBlock__lead {
@@ -223,6 +224,10 @@ a:focus-visible {
     color: var(--text-secondary);
 }
 
+.footer a {
+    text-decoration-color: transparent;
+}
+
 
 /* EXAMPLE */
 
@@ -252,6 +257,14 @@ a:focus-visible {
     padding: clamp(24px, 3vw, 32px) clamp(12px, 3vw, 24px) clamp(12px, 3vw, 24px);
     background-color: var(--backgroud-secondary);
     border-radius: 12px;
+}
+
+.example:has(pre:focus-visible) {
+    outline-color: var(--text-link);
+    outline-style: solid;
+    outline-width: 3px;
+    outline-offset: 2px;
+    border-radius: 2px;
 }
 
 .example__view {

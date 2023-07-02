@@ -14,6 +14,10 @@ code, pre {
     hyphens: none;
 }
 
+pre:focus-visible {
+    outline: none;
+}
+
 pre::-moz-selection, pre ::-moz-selection,
 code::-moz-selection, code ::-moz-selection {
     text-shadow: none;
