@@ -1,0 +1,187 @@
+.example-1 .block {
+    margin: 0 auto;
+    height: 100px; aspect-ratio: 1/1;
+    border-radius: 50%;
+    background-color: #fff;
+}
+
+.example-2 .block {
+    margin: 0 auto;
+    height: 100px; aspect-ratio: 2/1;
+    border-radius: 50%;
+    background-color: #fff;
+}
+
+.example-3 .block {
+    margin: 0 auto;
+    height: 100px; aspect-ratio: 2/1;
+    border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+    background-color: #fff;
+}
+
+.example-4 .block {
+    margin: 0 auto;
+    height: 100px; aspect-ratio: 3/1;
+    border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+    background-color: #fff;
+}
+
+.example-5 .block {
+    margin: 0 auto;
+    height: 100px; aspect-ratio: 1/1;
+    border-radius: 40% 60% 30% 70% / 35% 50% 50% 65%;
+    background-color: #fff;
+}
+
+.example-6 .block {
+    margin: 0 auto;
+    height: 100px; aspect-ratio: 1/1;
+    border-radius: 50%;
+    box-shadow: inset 0 0 0 5px white, inset 0 0 0 15px rgba(255 255 255 / 0.5), inset 0 0 0 30px rgba(255 255 255 / 0.25);
+}
+
+.example-7 .block {
+    margin: 0 auto;
+    height: 100px; aspect-ratio: 1/1;
+    border-radius: 50%;
+    box-shadow: inset 5px 5px 0 5px white, inset 10px 10px 0 15px rgba(255 255 255 / 0.5), inset 15px 15px 0 30px rgba(255 255 255 / 0.25);
+}
+
+.example-8 .block {
+    margin: 0 auto;
+    height: 100px; aspect-ratio: 1/1;
+    border-radius: 50%;
+    box-shadow: inset 50px -40px 0 -20px white;
+}
+
+.example-9 .block {
+    margin: 0 auto;
+    height: 100px; aspect-ratio: 1/1;
+    border-radius: 50%;
+    border: 2px solid white;
+    box-shadow: -100px 0 0 10px white, 100px 0 0 -10px white;
+}
+
+.example-10 .block {
+    margin: 0 auto;
+    height: 100px; aspect-ratio: 1/1;
+    border-radius: 50%;
+    border: 2px solid white;
+    filter: drop-shadow(102px 0 0 white) drop-shadow(-102px 0 0 white);
+}
+
+.example-11 .block {
+    margin: 0 auto;
+    height: 100px; aspect-ratio: 1/1;
+    background: radial-gradient(white, transparent);
+    mask-image: linear-gradient(45deg, black 50%, transparent 50%);
+    -webkit-mask-image: linear-gradient(45deg, black 50%, transparent 50%);
+}
+
+.example-12 .block {
+    margin: 0 auto;
+    height: 100px; aspect-ratio: 1/1;
+    background: radial-gradient(white, transparent);
+    -webkit-mask-image: linear-gradient(45deg, black 50%, transparent 50%);
+    -webkit-mask-size: 10px 10px;
+}
+
+.example-13 .block {
+    margin: 0 auto;
+    height: 100px; aspect-ratio: 1/1;
+    background: radial-gradient(white, transparent);
+    -webkit-mask-image: radial-gradient(closest-side, white 100%, transparent 0), linear-gradient(45deg, black 50%, transparent 50%);
+}
+
+.example-14 .block {
+    margin: 0 auto;
+    height: 100px; aspect-ratio: 1/1;
+    background: radial-gradient(white, transparent);
+    clip-path: polygon(50px 0px, 70px 25px, 100px 38px, 83px 66px, 81px 100px, 50px 92px, 19px 100px, 17px 67px, 0px 38px, 30px 25px);
+}
+
+.example-15 .block {
+    margin: 0 auto;
+    height: 100px; aspect-ratio: 1/1;
+    background: linear-gradient(0deg, white 2px, transparent 2px 4px) 0 0 / 100% 4px;
+}
+
+.example-16 .block {
+    margin: 0 auto;
+    height: 100px; aspect-ratio: 1/1;
+    background: radial-gradient(closest-side, white 100%, transparent 0) 0 0 / 10px 10px;
+}
+
+.example-17 .block {
+    margin: 0 auto;
+    height: 100px; aspect-ratio: 1/1;
+    background: conic-gradient(white 45deg, transparent 45deg 135deg, white 135deg 225deg, transparent 225deg 315deg, white 315deg) 0 0 / 10px 10px;
+}
+
+.example-18 .block {
+    margin: 0 auto;
+    height: 100px; aspect-ratio: 1/1;
+    background-image: radial-gradient(closest-side, white 100%, transparent 0), radial-gradient(closest-side, white 100%, transparent 0), linear-gradient(white, white);
+    background-position: 10px 0px, 60px 0px, 0px 80px;
+    background-size: 30px 50px, 30px 50px, 100% 20px;
+    background-repeat: no-repeat;
+}
+
+.example-19 .block {
+    margin: 0 auto;
+    height: 100px; aspect-ratio: 1/1;
+    background-color: white;
+    rotate: 45deg;
+}
+
+.example-20 .block {
+    margin: 0 auto;
+    height: 100px; aspect-ratio: 1/1;
+    background-color: white;
+    transform: skew(10deg);
+}
+
+.example-21 .block {
+    margin: 0 auto;
+    height: 100px; aspect-ratio: 1/1;
+    background-color: white;
+    transform: skew(10deg, 10deg);
+}
+
+.example-22 .block {
+    margin: 0 auto;
+    width: 0;
+    border-style: solid;
+    border-color: transparent transparent white;
+    border-width: 0 50px 100px;
+}
+
+.example-23 .block {
+    margin: 0 auto;
+    width: 0;
+    border-style: solid;
+    border-color: transparent transparent white;
+    border-width: 0 0 100px 100px;
+}
+
+.example-24 .block {
+    margin: 0 auto;
+    width: 0;
+    border-style: solid;
+    border-color: transparent transparent white;
+    border-width: 0 0 100px 100px;
+}
+
+.example-25 .block {
+    margin: 0 auto;
+    width: 100px; aspect-ratio: 1/1;
+    background-color: white;
+    border-radius: 0 100%;
+}
+
+.example-26 .block {
+    margin: 0 auto;
+    width: 100px; aspect-ratio: 1/1;
+    background-color: white;
+    border-radius: 0 100% 0 0;
+}
